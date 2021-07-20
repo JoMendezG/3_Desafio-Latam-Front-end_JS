@@ -21,7 +21,7 @@
     <br>
     <br>
     Las información debe ser desplegada en una página HTML que usted debe crear. Puede
-    utilizar la función  <pre><code>document.write()</code></pre> y desplegar la información solicitada entre párrafos, o
+    utilizar la función <code>document.write()</code> y desplegar la información solicitada entre párrafos, o
     como usted estime conveniente, lo importante es que la información que se le solicite se
     muestre en dicha página que creará.
     <br>
