@@ -13,7 +13,7 @@
     <p><a href="https://josefamendezpruebaunodl.ga/Unidad_3/3_1_VariablesYOperadoresLogicos/index.html">Vista
         del proyecto</a></p>
     <h1 id="desafío">Descripción </h1>
-    <>El centro médico dental de Ñuñoa se ha puesto en contacto una vez más con usted, para
+    <p>El centro médico dental de Ñuñoa se ha puesto en contacto una vez más con usted, para
       que desarrolle algunas modificaciones con respecto a sus consultas médicas y desplegar
       otra información que se le indicará más adelante. En esta ocasión, le piden hacer
       modificaciones a la página HTML que disponen, por lo que se le entrega el código de la
@@ -45,7 +45,9 @@
         <br>
         Ejemplo:
         <br>
+        <br>
         8:30 - ANDREA ZUÑIGA - MARCELA RETAMAL - 11123425-6 - ISAPRE
+        <br>
         <br>
         11:00 - MARIA PIA ZAÑARTU - ANGEL MUÑOZ - 9878789-2 - ISAPRE
         </li>
@@ -54,6 +56,7 @@
         Imprimir un listado total de todos los pacientes que se atendieron en el centro
         médico. Para esto, deberá unir todos los nombres de pacientes e imprimir uno por
         cada párrafo.
+        <br>
         <br>
         Ejemplo:
         <br>
@@ -67,6 +70,7 @@
         Filtrar aquellos pacientes que indican ser de ISAPRE en la lista de consultas médicas
         de Dental.
         <br>
+        <br>
         Ejemplo:
         <br>
         MARCELA RETAMAL - ISAPRE
@@ -78,6 +82,7 @@
         <li>
         Filtrar aquellos pacientes que indican ser de FONASA en la lista de consultas
         médicas de Traumatología.
+        <br>
         <br>
         Ejemplo:
         <br>
