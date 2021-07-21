@@ -30,6 +30,7 @@
     <ol>
         <li>
           Agregar las siguientes horas al arreglo de Traumatología:
+          <br>
           <img src="../imgReadme/img5.jpg" alt="">
         </li>
         <br>
