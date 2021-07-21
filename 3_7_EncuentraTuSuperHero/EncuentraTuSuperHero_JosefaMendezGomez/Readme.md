@@ -87,6 +87,8 @@
             <br>
             <br>
             <img src="imgReadme/img7.jpg" alt="">
+            </li>
+          </ol>
         </li>
     </ol>
   </div>
