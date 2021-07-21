@@ -13,37 +13,63 @@
     <p><a href="https://josefamendezpruebaunodl.ga/Unidad_3/3_1_VariablesYOperadoresLogicos/index.html">Vista
         del proyecto</a></p>
     <h1 id="desafío">Descripción </h1>
-    <p>Un consultorio médico requiere un programa realizado en JavaScript, que permita
-    almacenar y/o modificar los datos de sus pacientes. Así como filtrar y mostrar los pacientes por nombre para poder hacer una búsqueda más rápida y ubicar la historia médica de cada persona. En el siguiente diagrama UML se puede observar cual es la   cardinalidad de los objetos y las propiedades que tiene cada uno.
+    <p>La empresa XYZ Consultores, necesita un sistema donde pueda registrar la información de
+    sus clientes, para poder calcular el impuesto anual que debe pagar cada cliente según el
+    monto total de ventas y deducciones anuales entregado, el cálculo se realizará mediante la
+    siguiente fórmula:
     <br>
     <br>
-     <img src="imgReadme/img8.jpg" alt="">
+    <i>Fórmula: ((monto_bruto_anual − deducciones) * 21%)</i>
     <br>
     <br>
-    Primeramente se deben mostrar todos los pacientes con sus datos personales, luego mediante un método de búsqueda, mostrar los datos del paciente que concuerden con el nombre que se envíe al método como argumento. Igualmente se deben proteger los datos y
-    evitar modificaciones directas, por lo que se debe implementar getters y setters. Todo esto se puede mostrar en la consola del navegador web de tu preferencia.
+   La empresa solicita desarrollar un programa con JavaScript utilizando las nuevas
+  tecnologías de ES6, considerando clases y que las modificaciones y consultas sean
+  mediante métodos específicos. Igualmente, desea que se apliquen archivos por separado
+  para facilitar el mantenimiento del sistema a futuro, implementando módulos de ES6 y
+  posteriormente transpilar el código mediante Babel.
+    <br>
+    <br>
+    Para ello, la empresa entrega el diagrama de clases a través de la siguiente imagen, con las
+    características básicas de lo que se debe diseñar y programar mediante la reseña de cardinalidad. En este caso, debes utilizar Node y Babel para ejecutar tu código, ya que solo debes realizar el programa en JavaScript, creando tres archivos, un archivo principal o main,y otros dos archivos para cada una de las clases.
+    <br>
+    <br>
+         <img src="imgReadme/img9.jpg" alt="">
     </p>
     <h1>Requerimientos</h1>
     <ol>
         <li>
-         Crear todo el código usando ES5.
+         Mantén un estilo de código (espacios, saltos de línea, indentación) uniforme en el
+        proyect   
         </li>
         <br>
         <li>
-         Crear una función constructora para cada objeto.   
+        Utilizar ES6 para el desarrollo de todo el programa.   
         </li>
         <br>
         <li>
-         Implementar métodos getters y setters para poder acceder y modificar los datos de
-los pacientes.
+         Implementar las funcionalidades de Babel instalando las dependencias necesarias
+          para su funcionamiento.
         </li>
         <br>
         <li>
-         Crear un método mediante la propiedad prototype que permita buscar los datos de los usuarios por nombre y otro método que permita mostrar todos los datos de los usuarios registrados.
+         Crear y configurar el archivo de babel.config.json.
         </li>
         <br>
         <li>
-        Instanciar cada objeto utilizando la instrucción new.
+        Crear los tres archivos de JavaScript e implementar la modularidad y clases de ES6
+        </li>
+        <br>
+        <li>
+        Implementar getter y setter para acceder y/o modificar los datos de las clases.
+        </li>
+        <br>
+        <li>
+        Implementar un método que permita calcular el impuesto total a pagar por parte del
+        cliente.
+        </li>
+        <br>
+        <li>
+        Transpilar el código de ES6 a ES5 utilizando babel desde la terminal
         </li>
     </ol>
   </div>
