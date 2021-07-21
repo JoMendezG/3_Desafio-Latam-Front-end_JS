@@ -1,66 +1,71 @@
-// Creo una variable para obtener la información del formulario por el ID
 const formulario = document.getElementById("formulario");
-// Imprimo formulario, deberia ver el html del formulario
 console.log(formulario);
 
-// Creo un evento para el formulario
 formulario.addEventListener("submit", function (event) {
-    // preventDefault nos permite funcionar nuestra validación
+    /*Los formularios están pensados para no usar JS. JS se usa para 
+    interseptar los formularios. Si vamos a usar el evento submit
+    con JS, debemos cancelar el evento por defecto de los formularios
+    para poder hacer nosotros nuestra lógica. */
+    
+    // Cancela el comportamiento por defecto del formulario
     event.preventDefault();
     console.log("evento submit");
 
-
-    // VARIABLES QUE LLAMAN AL HTML POR ID
-    // Variables para campos imput del formulario
-    const onlyLetters = /([A-Za-z])/g;
+    // Llamamos los imputs del formulario por id o querySelector
     const inputNombre = document.getElementById("nombre");
     const inputAsunto = document.getElementById("asunto");
     const inputMensaje = document.getElementById("mensaje");
 
-    // Variables para los errores de ser generados
+    // Llamamos los mensajes ocultos en el HTML
     const errorNombre = document.getElementById("errorNombre");
     const errorAsunto = document.getElementById("errorAsunto");
     const errorMensaje = document.getElementById("errorMensaje");
 
-    // Variable que declara el formulario completado exitosamente
-    const successResultado = document.getElementById("resultado");
+    // Validamos los imputs
+    // Expresiones regulares, permiten hacer operaciones con texto
+    // https://regexr.com/
+    // Toma las letras mayusculas y minusculas del abcdario
+    const soloLetras = /([A-Za-z])/g
 
-    // Booleanas que validan que el campo esta funcionando en las condiconales
+    // Variable que nos dira si esta bien o mal los imputs
+    // El formulario es falso hasta que se demuestre lo contrario con las condicionales
     let validNombre = false;
     let validAsunto = false;
     let validMensaje = false;
 
-    // Si el testeo de las letras es verdadero en el imput del nombre
-    if (onlyLetters.test(inputNombre.value)) {
-    // Cambio de estado la validación
-    validNombre = true;
-    // No escribo nada en el campo
-    errorNombre.innerHTML = "";
+    const exitoFormulario = document.getElementById("resultado");
+
+    // Validación Nombre
+    if (soloLetras.test(inputNombre.value)) {
+        validNombre = true;
+        errorNombre.innerHTML = "";
     } else {
-    // Activo la variable error y escribo este mensaje
-    errorNombre.innerHTML = "El campo nombre no es valido";
+        // Si quiero agregar texto a las etiquetas del html uso innerHTML
+        errorNombre.innerHTML = "El campo nombre no es valido";
     }
 
-
-    if (onlyLetters.test(inputAsunto.value)) {
+    // Validación Asunto
+    if (soloLetras.test(inputAsunto.value)) {
         validAsunto = true;
         errorAsunto.innerHTML = "";
     } else {
-    errorAsunto.innerHTML = "El campo asunto no es valido";
-    }
-    
-    if (onlyLetters.test(inputMensaje.value)) {
-    validMensaje = true;
-    errorMensaje.innerHTML = "";
-    } else {
-    errorMensaje.innerHTML = "El campo mensaje no es valido";
-    }
-    
-    // Si los tres campos son verdaderos escribe la palabra exito
-    if (validNombre && validAsunto && validMensaje) {
-    successResultado.innerHTML = "Exito";
-    } else {
-    successResultado.innerHTML = "";
+        errorAsunto.innerHTML = "El campo asunto no es valido";        
     }
 
-});
+    // Validamos Mensaje
+    if (soloLetras.test(inputMensaje.value)) {
+        validMensaje = true;
+        errorMensaje.innerHTML = "";
+    } else {
+        errorMensaje.innerHTML = "El campo mensaje no es valido";        
+    }
+
+    // Si todos los imputs son correctos...
+    if (validNombre == true && validAsunto == true && validMensaje == true) {
+        exitoFormulario.innerHTML = "Formulario completado correctamente"
+    } else {
+        exitoFormulario.innerHTML = "";
+    }
+
+})
+

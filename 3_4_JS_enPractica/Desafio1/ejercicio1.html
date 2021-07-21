@@ -12,20 +12,20 @@
             <h2>
                 Escríbenos !!!
             </h2>
-            <div class="resultado" style="color:green;font-style: italic"></div>
+            <div id="resultado" style="color:green;font-style: italic"></div>
             <form id="formulario">
                 <div>
                     <div style="display: flex;flex-direction: column;">
                         <label>Nombre completo</label>
                         <input id="nombre" type="text">
-                        <p class="errorNombre" style="color:red;font-style: italic;"></p>
+                        <p id="errorNombre" style="color:red;font-style: italic;"></p>
                     </div>
                     <div style="display: flex;flex-direction: column;">
                         <label>
                             Asunto
                         </label>
                         <input id="asunto" type="text">
-                        <p class="errorAsunto" style="color:red;font-style: italic;"></p>
+                        <p id="errorAsunto" style="color:red;font-style: italic;"></p>
                     </div>
                 </div>
                 <div style="display: flex;flex-direction: column;">
@@ -33,7 +33,7 @@
                         Mensaje
                     </label>
                     <textarea id="mensaje"></textarea>
-                    <p class="errorMensaje" style="color:red;font-style: italic;"></p>
+                    <p id="errorMensaje" style="color:red;font-style: italic;"></p>
                 </div>
                 <div>
                     <button id="botton" type="submit">
