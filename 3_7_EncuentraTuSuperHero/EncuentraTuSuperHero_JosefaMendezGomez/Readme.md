@@ -38,7 +38,7 @@
           menús de navegación y botones. Los estilos los puedes agregar a tu gusto. Como se muestra en la siguiente imagen de referencia.
           <br>
           <br>
-          <img src="/imgReadme/img6.jpg" alt="">    
+          <img src="imgReadme/img6.jpg" alt="">    
         </li>
         <br>
         <li>
@@ -86,7 +86,7 @@
             En la siguiente imagen, se puede observar el resultado de la búsqueda del id número: 213
             <br>
             <br>
-            <img src="/imgReadme/img7.jpg" alt="">
+            <img src="imgReadme/img7.jpg" alt="">
         </li>
     </ol>
   </div>
