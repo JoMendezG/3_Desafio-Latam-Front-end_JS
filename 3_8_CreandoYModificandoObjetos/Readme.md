@@ -19,7 +19,7 @@
     siguiente fórmula:
     <br>
     <br>
-    <i>Fórmula: ((monto_bruto_anual − deducciones) * 21%)</i>
+    <i><b>Fórmula: ((monto_bruto_anual − deducciones) * 21%)</b></i>
     <br>
     <br>
    La empresa solicita desarrollar un programa con JavaScript utilizando las nuevas
