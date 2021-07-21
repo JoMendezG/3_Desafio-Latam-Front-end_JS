@@ -46,6 +46,7 @@ módulo. Partiendo del siguiente diagrama de clases:
         <li>
           Implementar el Patrón Módulo mediante IIFE, en donde:
           <br>
+          <br>
           <ul>
             <li>
             Se cree una función privada que reciba la url del video y el id de la etiqueta
@@ -62,6 +63,7 @@ puedes utilizar la instrucción “setAttribute” para manipular el DOM.
         <br>
         <li>
         Establecer una clase padre denominada Multimedia para:
+        <br>
         <br>
         <ul>
           <li>
@@ -84,7 +86,8 @@ puedes utilizar la instrucción “setAttribute” para manipular el DOM.
         </li>
         <br>
         <li>
-        Crear una clase “Reproductor”, siendo hija de la clase padre Multimedia para
+        Crear una clase “Reproductor”, siendo hija de la clase padre Multimedia para:
+        <br>
         <br>
           <ul>
             <li>
