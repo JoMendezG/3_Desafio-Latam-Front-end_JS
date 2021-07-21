@@ -66,6 +66,7 @@
         <br>
         ARMANDO LUNA…
         </li>
+        <br>
         <li>
         Filtrar aquellos pacientes que indican ser de ISAPRE en la lista de consultas médicas
         de Dental.
@@ -79,6 +80,7 @@
         <br>
         ANA SEPULVEDA - ISAPRE
         </li>
+        <br>
         <li>
         Filtrar aquellos pacientes que indican ser de FONASA en la lista de consultas
         médicas de Traumatología.
