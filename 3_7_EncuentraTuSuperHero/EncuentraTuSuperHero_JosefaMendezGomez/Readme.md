@@ -46,6 +46,7 @@
           el botón de búsqueda, se debe capturar y validar la información para evitar
           búsquedas que contengan algún texto diferente a números y mostrar la información
           dinámicamente mediante la librería jQuery y CanvasJS con un gráfico de pastel. Para lograr todo esto se debe:
+          <br>
           <ol>
             <li>
                Capturar la información ingresada mediante eventos del DOM con jQuery.
