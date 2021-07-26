@@ -50,12 +50,12 @@
           <br>
           <ol>
             <li>
-               Capturar la información ingresada mediante eventos del DOM con jQuery.
+              Capturar la información ingresada mediante eventos del DOM con jQuery.
             </li>
             <br>
             <li>
-                Implementar funciones para separar la captura de la información ingresada
-                por el usuario con la consulta a la API.
+              Implementar funciones para separar la captura de la información ingresada
+              por el usuario con la consulta a la API.
             </li>
             <br>
             <li>
@@ -63,7 +63,7 @@
             </li>
             <br>
             <li>
-               Consultar la API mediante AJAX con la sintaxis de jQuery
+              Consultar la API mediante AJAX con la sintaxis de jQuery
             </li>
             <br>
             <li>
@@ -72,23 +72,23 @@
             </li>
             <br>
             <li>
-               Utilizar ciclos y métodos para arreglos u objetos que permitan recorrer,
-                ordenar y mostrar la información
+              Utilizar ciclos y métodos para arreglos u objetos que permitan recorrer,
+              ordenar y mostrar la información
             </li>
             <br>
             <li>
-               Emplear la librería de gráficos CanvasJS, para mostrar dinámicamente
-                información específica de cada superhéroe.
+              Emplear la librería de gráficos CanvasJS, para mostrar dinámicamente
+              información específica de cada superhéroe.
             </li>
             <br>
             <li>
-               Implementar estructuras condicionales para generar alertas cuando existan
-                errores en la búsqueda.
+              Implementar estructuras condicionales para generar alertas cuando existan
+              errores en la búsqueda.
             </li>
-            En la siguiente imagen, se puede observar el resultado de la búsqueda del id número: 213
-            <br>
-            <br>
-            <img src="imgReadme/img7.jpg" alt="">
+              En la siguiente imagen, se puede observar el resultado de la búsqueda del id número: 213
+              <br>
+              <br>
+              <img src="imgReadme/img7.jpg" alt="">
             </li>
           </ol>
         </li>
