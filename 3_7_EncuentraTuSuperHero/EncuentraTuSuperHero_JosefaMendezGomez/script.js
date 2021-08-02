@@ -30,6 +30,43 @@ function renderSuperhero(superHero) {
     alianza.html(superHero.biography.aliases.join(" - "));
 }
 
+function renderSuperheroChart(superhero) {
+    const options = {
+        title: {
+            text: `Estadísticas de Poder para ${superhero.name}`,
+        },
+        data: [{
+            type: "pie",
+            dataPoints: [{
+                    label: "Inteligencia",
+                    y: Number.parseInt(superhero.powerstats.intelligence),
+                },
+                {
+                    label: "Fuerza",
+                    y: Number.parseInt(superhero.powerstats.strength),
+                },
+                {
+                    label: "Velocidad",
+                    y: Number.parseInt(superhero.powerstats.speed),
+                },
+                {
+                    label: "Durabilidad",
+                    y: Number.parseInt(superhero.powerstats.durability),
+                },
+                {
+                    label: "Poder",
+                    y: Number.parseInt(superhero.powerstats.power),
+                },
+                {
+                    label: "Combate",
+                    y: Number.parseInt(superhero.powerstats.combat),
+                },
+            ],
+        }, ],
+    };
+    $("#chartContainer").CanvasJSChart(options);
+}
+
 // Cuando el formulario realice submit se activa la siguiente f(x)
 formulario.submit(function(event) {
     // Como los formularios no trabajan con js se utiliza esta función para que no recargue la pag
@@ -45,6 +82,7 @@ formulario.submit(function(event) {
     }).done(function(data) {
         // Llamo a la función que conecta la api con el DOM
         renderSuperhero(data);
+        renderSuperheroChart(data);
         console.log(data);
     });
 });

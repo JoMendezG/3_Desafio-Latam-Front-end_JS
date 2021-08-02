@@ -52,3 +52,9 @@ p {
 hr {
     margin: 4px 0;
 }
+
+.grafico {
+    width: 850px;
+    height: auto;
+    margin: 50px auto;
+}
