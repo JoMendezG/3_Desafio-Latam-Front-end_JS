@@ -30,11 +30,13 @@ function renderSuperhero(superHero) {
     alianza.html(superHero.biography.aliases.join(" - "));
 }
 
+// Función para crear el gráfico
 function renderSuperheroChart(superhero) {
     const options = {
         title: {
             text: `Estadísticas de Poder para ${superhero.name}`,
         },
+        // Colocamos la información del gráfico
         data: [{
             type: "pie",
             dataPoints: [{
@@ -67,6 +69,8 @@ function renderSuperheroChart(superhero) {
     $("#chartContainer").CanvasJSChart(options);
 }
 
+//
+
 // Cuando el formulario realice submit se activa la siguiente f(x)
 formulario.submit(function(event) {
     // Como los formularios no trabajan con js se utiliza esta función para que no recargue la pag
@@ -77,12 +81,13 @@ formulario.submit(function(event) {
 
     $.ajax({
         type: "GET",
-        dataType: "json",
         url: `https://www.superheroapi.com/api.php/4747081165343742/${idSuperHeroe}`,
-    }).done(function(data) {
-        // Llamo a la función que conecta la api con el DOM
-        renderSuperhero(data);
-        renderSuperheroChart(data);
-        console.log(data);
+        dataType: "json",
+        success: function(data) {
+            // Llamo a la función que conecta la api con el DOM
+            renderSuperhero(data);
+            renderSuperheroChart(data);
+            console.log(data);
+        },
     });
 });
