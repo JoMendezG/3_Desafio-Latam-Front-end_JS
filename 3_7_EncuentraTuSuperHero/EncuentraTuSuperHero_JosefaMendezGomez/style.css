@@ -1,0 +1,54 @@
+.imgInicio {
+    display: block;
+    margin: 0 auto;
+}
+
+.form-group {
+    width: 40%;
+    margin: 20px auto;
+}
+
+.labelForm {
+    display: block;
+    text-align: center;
+}
+
+.titulo {
+    display: block;
+    text-align: center;
+    margin: 50px 0 0 0;
+}
+
+button.btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 50px;
+    background-color: #c60103;
+    border: none;
+}
+
+button.btn:hover {
+    background-color: #830002;
+    transform: scale(1.1, 1.1);
+}
+
+form {
+    margin-bottom: 50px;
+}
+
+.SHimg {
+    width: 282px;
+    height: 282px;
+}
+
+.card {
+    margin: 0 auto;
+}
+
+p {
+    margin-bottom: 0 !important;
+}
+
+hr {
+    margin: 4px 0;
+}
