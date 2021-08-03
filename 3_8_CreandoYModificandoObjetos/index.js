@@ -1,15 +1,34 @@
 // Creamos la función constructora del consultorio
 function Consultorio(nombre, pacientes) {
-    // this.nombre = nombre;
-    // this.pacientes = pacientes;
-
-    // Creamos los getters y setters de la función constructora
-    var _nombre = nombre;
-    var _pacientes = pacientes;
+    this.nombre = nombre;
+    this.pacientes = pacientes;
 }
 
 Consultorio.prototype.todosLosPacientes = function() {
-    console.log(this.pacientes);
+    console.log(JSON.parse(JSON.stringify(this.pacientes)));
+};
+
+// Función que filtra los pacientes paraq encontrarlos
+Consultorio.prototype.buscarPaciente = function(nombrePacienteABuscar) {
+    var indice = -1;
+
+    // For que recorre un arreglo de tamaño indefinido
+    for (var i = 0; i < this.pacientes.length; i++) {
+        if (this.pacientes[i].nombre == nombrePacienteABuscar) {
+            indice = i;
+        }
+    }
+
+    // Si hay un valor
+    if (indice >= 0) {
+        console.log(
+            "Paciente encontrado, sus datos son: ",
+            JSON.parse(JSON.stringify(this.pacientes[indice]))
+        );
+        // Si no hay ni un valor
+    } else {
+        console.log("Paciente no encontrado, intenta con otro nombre");
+    }
 };
 
 // Creamos la función constructora de Pacientes
@@ -33,6 +52,7 @@ function Paciente(nombre, edad, rut, diagnostico) {
         set: function(nuevoNombre) {
             _nombre = nuevoNombre;
         },
+        enumerable: true,
     });
 
     Object.defineProperty(this, "edad", {
@@ -42,6 +62,7 @@ function Paciente(nombre, edad, rut, diagnostico) {
         set: function(nuevoEdad) {
             _edad = nuevoEdad;
         },
+        enumerable: true,
     });
 
     Object.defineProperty(this, "rut", {
@@ -51,6 +72,7 @@ function Paciente(nombre, edad, rut, diagnostico) {
         set: function(nuevoRut) {
             _rut = nuevoRut;
         },
+        enumerable: true,
     });
 
     Object.defineProperty(this, "diagnostico", {
@@ -60,6 +82,7 @@ function Paciente(nombre, edad, rut, diagnostico) {
         set: function(nuevoDiagnostico) {
             _diagnostico = nuevoDiagnostico;
         },
+        enumerable: true,
     });
 }
 
@@ -75,3 +98,9 @@ const ConsultorioNN = new Consultorio("Josefa Méndez", [
 ]);
 
 ConsultorioNN.todosLosPacientes();
+
+// Busqueda de pacientes de forma manual
+ConsultorioNN.todosLosPacientes();
+ConsultorioNN.buscarPaciente("Roberto");
+ConsultorioNN.buscarPaciente("Carolina");
+ConsultorioNN.buscarPaciente("Angela");
