@@ -1,5 +1,6 @@
 "use strict";
 
+// Creamos una clase llamada Animal que puede ser exportada
 export class Animal {
   #nombre;
   #edad;
@@ -7,6 +8,7 @@ export class Animal {
   #comentarios;
   #sonido;
 
+  // Constructor con todas las propiedades indicadas
   constructor(nombre, edad, img, comentarios, sonido) {
     this.#nombre = nombre;
     this.#edad = edad;
@@ -15,6 +17,7 @@ export class Animal {
     this.#sonido = sonido;
   }
 
+  //   Getters y Setters
   get Nombre() {
     return this.#nombre;
   }

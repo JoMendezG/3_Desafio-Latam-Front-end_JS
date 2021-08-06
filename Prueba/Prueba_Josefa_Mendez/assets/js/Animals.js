@@ -1,7 +1,9 @@
 "use strict";
 
+// Importamos la clase Animla de Animal.js
 import { Animal } from "./Animal.js";
 
+//
 export class Leon extends Animal {
   Rugir() {
     console.log("Roooar!");

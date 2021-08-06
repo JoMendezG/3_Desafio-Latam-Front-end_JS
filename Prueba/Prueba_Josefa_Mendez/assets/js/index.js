@@ -1,14 +1,13 @@
 "use strict";
 
+// Importo las clases de los animales desde Animals.js
 import { Leon, Lobo, Oso, Serpiente, Aguila } from "./Animals.js";
 
-// import * as Animals from "./Animals.js";
-
-// console.log(Animals);
 (async () => {
   const Response = await fetch("/animales.json");
   const { animales: Animales } = await Response.json();
 
+  //   Obtenemos los elementos del html por ID
   const nombreAnimalElement = document.getElementById("animal");
   const edadAnimalElement = document.getElementById("edad");
   const comentariosAnimalElement = document.getElementById("comentarios");
@@ -17,7 +16,6 @@ import { Leon, Lobo, Oso, Serpiente, Aguila } from "./Animals.js";
   const btnRegistrarElement = document.getElementById("btnRegistrar");
 
   nombreAnimalElement.addEventListener("change", () => {
-    // console.log(nombreAnimalElement.value);
     const animalElegido = nombreAnimalElement.value;
 
     const animalEncontrado = Animales.find(
@@ -32,6 +30,7 @@ import { Leon, Lobo, Oso, Serpiente, Aguila } from "./Animals.js";
     );
   });
 
+  //   Cuando realizo un click en elemento boton imprime en la consola los valores
   btnRegistrarElement.addEventListener("click", () => {
     console.log(
       nombreAnimalElement.value,
