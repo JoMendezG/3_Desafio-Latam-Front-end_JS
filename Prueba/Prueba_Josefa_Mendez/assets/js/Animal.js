@@ -42,6 +42,7 @@ export class Animal {
     return this.#sonido;
   }
 
+  //   función que permite reproducir el sonido correspondiente de cada animal
   playerPlay() {
     const player = document.getElementById("player");
     player.setAttribute("src", `assets/sounds/${this.#sonido}`);

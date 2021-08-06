@@ -18,12 +18,14 @@ import { Leon, Lobo, Oso, Serpiente, Aguila } from "./Animals.js";
 
   const animalContainerElement = document.getElementById("Animales");
 
+  //   Almacena en un array toda la información de cada animal
   const AnimalCards = [];
 
   //   Aquí buscamos la imagen correspondiente al animal
   nombreAnimalElement.addEventListener("change", () => {
     const animalElegido = nombreAnimalElement.value;
 
+    // Encuentra la información del animal a través del nombre
     const animalEncontrado = Animales.find(
       (animal) => animal.name === animalElegido
     );
@@ -46,6 +48,7 @@ import { Leon, Lobo, Oso, Serpiente, Aguila } from "./Animals.js";
       (animal) => animal.name === nombreAnimal
     );
 
+    // Parametros agrupados para el switch case
     const params = [
       nombreAnimal,
       edadAnimal,
@@ -54,6 +57,7 @@ import { Leon, Lobo, Oso, Serpiente, Aguila } from "./Animals.js";
       animalEncontrado.sonido,
     ];
 
+    // Casos que almacenan las propiedades según animal
     switch (nombreAnimal) {
       case "Leon":
         // Guardamos este animal dentro del mismo arreglo
@@ -77,6 +81,7 @@ import { Leon, Lobo, Oso, Serpiente, Aguila } from "./Animals.js";
         break;
     }
 
+    // Activamos la función render
     render();
   });
 
@@ -87,13 +92,18 @@ import { Leon, Lobo, Oso, Serpiente, Aguila } from "./Animals.js";
       const IMGImagen = document.createElement("img");
       const DIVCardButton = document.createElement("div");
 
+      //   Agrega una card
       DIVContainer.classList.add("card");
 
+      //   Busca en la carpeta imgs la foto correspondiente al animal
       IMGImagen.setAttribute("src", `assets/imgs/${animal.Img}`);
+      //   Añade las imagenes del animal correspondiente de tamaño pequeño
       IMGImagen.classList.add("img-small");
 
+      //   Creo un card footer
       DIVCardButton.classList.add("card-footer", "p-0");
 
+      //   En este card footer agrega un boton con el svg del sonido
       DIVCardButton.innerHTML = `
       <button class="btn btn-block" style="background:
       #ffc107">
@@ -101,10 +111,12 @@ import { Leon, Lobo, Oso, Serpiente, Aguila } from "./Animals.js";
       </button>
       `;
 
+      //   Si preciono la imagen levanta un modal
       IMGImagen.addEventListener("click", () => {
         console.log("click imagen =>", animal);
         $("#modal").modal("show");
 
+        // Diseño el modal por un modal-body e incluyo en una lista la información seleccionada del animal
         const modalBodyElement = document.querySelector("#modal .modal-body");
         modalBodyElement.innerHTML = `
         <img src="assets/imgs/${animal.Img}" class="img-small"/>
@@ -116,6 +128,7 @@ import { Leon, Lobo, Oso, Serpiente, Aguila } from "./Animals.js";
         `;
       });
 
+      //   Cuando preciono el boton dependiendo del animal su sonido
       DIVCardButton.addEventListener("click", () => {
         console.log("click", animal);
         switch (animal.Nombre) {

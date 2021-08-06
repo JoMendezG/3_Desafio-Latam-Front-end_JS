@@ -3,7 +3,7 @@
 // Importamos la clase Animla de Animal.js
 import { Animal } from "./Animal.js";
 
-//
+// Exporto las clases de cada animal para utilizar en el index.js
 export class Leon extends Animal {
   Rugir() {
     this.playerPlay();
