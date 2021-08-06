@@ -6,18 +6,21 @@ import { Animal } from "./Animal.js";
 //
 export class Leon extends Animal {
   Rugir() {
+    this.playerPlay();
     console.log("Roooar!");
   }
 }
 
 export class Lobo extends Animal {
   Aullar() {
+    this.playerPlay();
     console.log("Auuuu!");
   }
 }
 
 export class Oso extends Animal {
   Gruñir() {
+    this.playerPlay();
     console.log("Grrrrr!");
   }
 }
@@ -28,12 +31,14 @@ export class Serpiente extends Animal {
   }
 
   Sisear() {
+    this.playerPlay();
     console.log("Zzzzz!");
   }
 }
 
 export class Aguila extends Animal {
   Chillar() {
+    this.playerPlay();
     console.log("Iiiiii!");
   }
 }
