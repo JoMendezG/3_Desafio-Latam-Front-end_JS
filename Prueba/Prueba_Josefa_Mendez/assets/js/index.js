@@ -1,6 +1,7 @@
 "use strict";
 
 // Importo las clases de los animales desde Animals.js
+import { Animal } from "./Animal.js";
 import { Leon, Lobo, Oso, Serpiente, Aguila } from "./Animals.js";
 
 (async () => {
@@ -16,11 +17,10 @@ import { Leon, Lobo, Oso, Serpiente, Aguila } from "./Animals.js";
   const btnRegistrarElement = document.getElementById("btnRegistrar");
 
   const animalContainerElement = document.getElementById("Animales");
-  const playerElement = document.getElementById("player");
-  const modalElement = document.getElementById("modal");
 
   const AnimalCards = [];
 
+  //   Aquí buscamos la imagen correspondiente al animal
   nombreAnimalElement.addEventListener("change", () => {
     const animalElegido = nombreAnimalElement.value;
 
@@ -85,7 +85,7 @@ import { Leon, Lobo, Oso, Serpiente, Aguila } from "./Animals.js";
     AnimalCards.forEach((animal) => {
       const DIVContainer = document.createElement("div");
       const IMGImagen = document.createElement("img");
-      const DIVCardButton = document.createElement("button");
+      const DIVCardButton = document.createElement("div");
 
       DIVContainer.classList.add("card");
 
@@ -95,8 +95,9 @@ import { Leon, Lobo, Oso, Serpiente, Aguila } from "./Animals.js";
       DIVCardButton.classList.add("card-footer", "p-0");
 
       DIVCardButton.innerHTML = `
-      <button class="btn btn-primary btn-block">
-        <img src"assets/imgs/audio.svg" style="width:10px" />
+      <button class="btn btn-block" style="background:
+      #ffc107">
+        <img src="assets/imgs/audio.svg" style="width: 20px" />
       </button>
       `;
 
@@ -106,8 +107,8 @@ import { Leon, Lobo, Oso, Serpiente, Aguila } from "./Animals.js";
 
         const modalBodyElement = document.querySelector("#modal .modal-body");
         modalBodyElement.innerHTML = `
-        <img src="/assets/imgs/${animal.Img}" class="img-small"/>
-        <ul class"text-white">
+        <img src="assets/imgs/${animal.Img}" class="img-small"/>
+        <ul style="color: white; list-style-type:none; margin-top: 10px;">
             <li>Nombre: ${animal.Nombre}</li>
             <li>Edad: ${animal.Edad}</li>
             <li>Comentarios: ${animal.Comentarios}</li>

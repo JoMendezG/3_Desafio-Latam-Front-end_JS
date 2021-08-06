@@ -44,8 +44,8 @@ export class Animal {
 
   playerPlay() {
     const player = document.getElementById("player");
-    player.setAttribute("src", `./sounds/${this.#sonido}`);
-    player.onload();
-    player.player();
+    player.setAttribute("src", `assets/sounds/${this.#sonido}`);
+    player.load();
+    player.play();
   }
 }
