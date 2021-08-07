@@ -5,7 +5,6 @@ class Impuestos {
   }
 
   //   getters y Setters
-
   get monto_bruto_anual() {
     return this._monto_bruto_anual;
   }
@@ -63,26 +62,40 @@ const clienteX = new Cliente("X", impuestosDeX);
 const impuestosDeY = new Impuestos(300, 15);
 const clienteY = new Cliente("Y", impuestosDeY);
 
-// Z = Carolina
-const impuestosDeZ = {
-  monto_bruto_anual: 200,
-  deducciones: 10,
-};
+const calculoDeX = clienteX.calcularImpuesto();
+const calculoDeY = clienteY.calcularImpuesto();
 
-const clienteZ = new Cliente("ClienteZ", impuestosDeZ);
+console.log({ calculoDeX, calculoDeY });
+// // Z = Carolina
+// const impuestosDeZ = {
+//   monto_bruto_anual: 200,
+//   deducciones: 10,
+// };
 
-console.log({
-  typeofZ: typeof impuestosDeZ,
-  typeof: typeof impuestosDeY,
-});
+// const clienteZ = new Cliente("ClienteZ", impuestosDeZ);
 
-console.log({
-  instanceofZ: impuestosDeZ instanceof Impuestos,
-  instanceofY: impuestosDeY instanceof Impuestos,
-});
+// console.log({
+//   typeofZ: typeof impuestosDeZ,
+//   typeof: typeof impuestosDeY,
+// });
+
+// console.log({
+//   instanceofZ: impuestosDeZ instanceof Impuestos,
+//   instanceofY: impuestosDeY instanceof Impuestos,
+// });
 
 // // W = Sebastian
 // const clienteW = new Cliente("clienteW", {});
 // const resultado = clienteW.calcularImpuestoM;
 
 // console.log({ resultado });
+
+/*
+BABEL
+1. Levantamos el package.json -> npm init -y
+2. npm install @babel/core @babel/cli --save-dev
+3. npx babel main.js --out-file dist.js -> creamos el dist.js
+4. Creamos el babel.config.json y lo configuramos con el código de desafío latam
+5. npm install @babel/preset-env -> Se convierte nuestro dist en ES5
+
+*/
