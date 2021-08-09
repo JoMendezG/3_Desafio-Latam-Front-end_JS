@@ -1,15 +1,15 @@
+"use strict";
+
 class Propietario {
-  constructor(nombre, direccion, telefono) {
-    this.nombre = nombre;
+  constructor(nombreDueno, direccion, telefono) {
+    this.nombreDueno = nombreDueno;
     this.direccion = direccion;
     this.telefono = telefono;
   }
 
   //   Método
   datosPropietario() {
-    console.log(
-      `Los datos del propietario son Nombre: ${this.nombre} - Dirección: ${this.direccion} - Telefono: ${this.telefono}`
-    );
+    return `Los datos del propietario son Nombre: ${this.nombreDueno} - Dirección: ${this.direccion} - Telefono: ${this.telefono}`;
   }
 }
 
@@ -32,7 +32,7 @@ class Animal extends Propietario {
   }
 
   get tipo() {
-    return this.tipo;
+    return this._tipo;
   }
 }
 
@@ -45,7 +45,7 @@ class Mascota extends Animal {
     direccionDelPropietario,
     telefonoDelPropietario,
     tipoDeAnimal,
-    nombre,
+    nombreMascota,
     enfermedad
   ) {
     super(
@@ -55,16 +55,16 @@ class Mascota extends Animal {
       tipoDeAnimal
     );
 
-    this._nombre;
+    this._nombreMascota;
     this._enfermedad;
   }
 
-  get nombre() {
-    return this._nombre;
+  get nombreMascota() {
+    return this._nombreMascota;
   }
 
-  set nombre(nuevoNombre) {
-    this._nombre = nuevoNombre;
+  set nombreMascota(nuevoNombreMascota) {
+    this._nombreMascota = nuevoNombreMascota;
   }
 
   get enfermedad() {
@@ -75,3 +75,67 @@ class Mascota extends Animal {
     this._enfermedad = nuevaEnfermedad;
   }
 }
+
+//////////////////////////////////////////////
+
+// Capturamos los datos del formulario
+// querySelector ID
+const propietarioElement = document.querySelector("#propietario");
+const telefonoElement = document.querySelector("#telefono");
+const direccionElement = document.querySelector("#direccion");
+const nombreMascotaElement = document.querySelector("#nombreMascota");
+const tipoElement = document.querySelector("#tipo");
+const enfermedadElement = document.querySelector("#enfermedad");
+
+const resultadoElement = document.querySelector("#resultado");
+
+// querySelector Class
+const btnElement = document.querySelector(".btn");
+
+btnElement.addEventListener("click", (event) => {
+  // Colocamos el prevent default para trabajar con el formulario en JS
+  event.preventDefault();
+  // capturamos la información
+  const nombreDelPropietario = propietarioElement.value;
+  const telefonoDelPropietario = telefonoElement.value;
+  const direccionDelPropietario = direccionElement.value;
+  const nombreDeLaMacosta = nombreMascotaElement.value;
+  const tipoDeMascota = tipoElement.value;
+  const enfermedadDeLaMascota = enfermedadElement.value;
+
+  //   Probamos que todo va bien con console.log
+  //   Objeto literal
+  //   console.log({
+  //     nombreDelPropietario,
+  //     telefonoDelPropietario,
+  //     direccionDelPropietario,
+  //     nombreDeLaMacosta,
+  //     tipoDeMascota,
+  //     enfermedadDeLaMascota,
+  //   });
+
+  // Cadena de prototipo por herencia, se vinculan todas las clases entre sí
+  const mascota = new Mascota(
+    nombreDelPropietario,
+    direccionDelPropietario,
+    telefonoDelPropietario,
+    tipoDeMascota,
+    nombreDeLaMacosta,
+    enfermedadDeLaMascota
+  );
+
+  console.log(mascota);
+
+  // _enfermedad es solo una variable común y corriente, en cambio enfermedad tiene el getter y setter
+
+  resultadoElement.innerHTML = `
+    <ul>
+      <li>${mascota.datosPropietario()}</li>
+      <li>El tipo de animal es un: ${
+        mascota.tipo
+      }, mientras que el nombre de la mascota es: ${
+    mascota.nombreMascota
+  } y la enfermedad es: ${mascota.enfermedad}</li>
+    </ul>
+    `;
+});
